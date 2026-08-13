@@ -44,7 +44,7 @@ jobs:
       - name: Build Web Application
         run: |
           cd wedding_invite
-          flutter build web --release --base-href "./"
+          flutter build web --release --base-href "/wedding-invite-ui/"
           cp build/web/index.html build/web/404.html
 
       - name: Upload GitHub Pages Artifact
