@@ -400,7 +400,7 @@ class _InviteScreenState extends State<InviteScreen> {
         ),
         const TextSpan(
           text: "11:00 AM\n"
-              "Mount Carmel Church,\n"
+              "Mount Carmel Church\n"
               "Chathiath, Kochi",
           style: TextStyle(
             fontWeight: FontWeight.w700,
