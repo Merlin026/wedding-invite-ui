@@ -17,7 +17,7 @@ class InviteScreen extends StatefulWidget {
 class _InviteScreenState extends State<InviteScreen> {
   late Timer _timer;
   Duration _timeLeft = Duration.zero;
-  final DateTime _weddingDate = DateTime(2026, 8, 30, 12, 0, 0);
+  final DateTime _weddingDate = DateTime(2026, 8, 30, 11, 0, 0);
 
   @override
   void initState() {
@@ -133,10 +133,10 @@ class _InviteScreenState extends State<InviteScreen> {
                           top: -70,
                           child: Opacity(
                             opacity: 0.6,
-                            child: Image.asset(
-                              'assets/quotey.png',
-                              width: isWide ? 280 : 230,
-                            ),
+                            // child: Image.asset(
+                            //   'assets/quotey.png',
+                            //   width: isWide ? 280 : 230,
+                            // ),
                           ),
                         ),
                         Padding(
@@ -146,7 +146,7 @@ class _InviteScreenState extends State<InviteScreen> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(12),
                               child: Image.asset(
-                                'assets/couple.png',
+                                'assets/illustration.png',
                                 fit: BoxFit.cover,
                                 height: isWide ? 420 : 340,
                                 width: double.infinity,
@@ -384,15 +384,31 @@ class _InviteScreenState extends State<InviteScreen> {
           ),
         ),
         const SizedBox(height: 10),
-        const Text(
-          "Inviting you\nto witness the sacred union\nsolemnized by\n\nVery Rev. Msgr. Mathew Kallingal\n\n11:00 AM\nMount Carmel Church\nChathiath",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.black87,
-            fontSize: 15,
-            height: 1.5,
-          ),
+        RichText(
+  textAlign: TextAlign.center,
+  text: const TextSpan(
+    style: TextStyle(
+      color: Colors.black87,
+      fontSize: 15,
+      height: 1.5,
+    ),
+    children: [
+      TextSpan(
+        text: "Inviting you\nto witness the sacred union\n"
+            "solemnized by\n\n"
+            "Very Rev. Msgr. Mathew Kallingal\n\n",
+      ),
+      TextSpan(
+        text: "11:00 AM\n"
+            "Mount Carmel Church\n"
+            "Chathiath",
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
         ),
+      ),
+    ],
+  ),
+),
         const SizedBox(height: 20),
         OutlinedButton(
           onPressed: () => _launchMapsUrl("https://www.google.com/maps/search/?api=1&query=Mount+Carmel+Church,+Chathiath,+Kochi,+Kerala"),
@@ -423,15 +439,26 @@ class _InviteScreenState extends State<InviteScreen> {
           ),
         ),
         const SizedBox(height: 10),
-        const Text(
-          "12:30 PM\nCarmel Hall\nCemetery Junction, Kochi",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.black87,
-            fontSize: 15,
-            height: 1.5,
-          ),
+        RichText(
+  textAlign: TextAlign.center,
+  text: const TextSpan(
+    style: TextStyle(
+      color: Colors.black87,
+      fontSize: 15,
+      height: 1.5,
+    ),
+    children: [
+      TextSpan(
+        text: "12:30 PM\n"
+            "Carmel Hall\n"
+            "Cemetery Junction, Kochi",
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
         ),
+      ),
+    ],
+  ),
+),
         const SizedBox(height: 20),
         OutlinedButton(
           onPressed: () => _launchMapsUrl("https://www.google.com/maps/place/Carmel+Hall/@9.9914413,76.279609,17z/data=!4m10!1m2!2m1!1sCarmel+Hall,+Pachalam,+Ernakulam,+Kerala!3m6!1s0x3b080d5cc431d5ab:0xd606c141305a14ae!8m2!3d9.9914413!4d76.2817977!15sCihDYXJtZWwgSGFsbCwgUGFjaGFsYW0sIEVybmFrdWxhbSwgS2VyYWxhkgEEaGFsbOABAA!16s%2Fg%2F1q5bkk9nj?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D"),

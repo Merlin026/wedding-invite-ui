@@ -63,6 +63,7 @@ flutter:
   assets:
     - assets/bg.jpg
     - assets/couple.png
+    - assets/illustration.png
     - assets/J.png
     - assets/quoteb.png
     - assets/quotey.png
