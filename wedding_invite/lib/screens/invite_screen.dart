@@ -140,26 +140,24 @@ class _InviteScreenState extends State<InviteScreen> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(12),
-                              child: Image.asset(
-                                'assets/illustration.png',
-                                fit: BoxFit.cover,
-                                height: isWide ? 420 : 340,
-                                width: double.infinity,
-                              ),
-                            ),
-                          ),
-                        ),
+  padding: EdgeInsets.symmetric(
+    horizontal: isWide ? 20 : 12,
+  ),
+  child: ClipRRect(
+    borderRadius: BorderRadius.circular(12),
+    child: Image.asset(
+      'assets/illustration.png',
+      width: double.infinity,
+      fit: BoxFit.contain,
+    ),
+  ),
+),
                       ],
                     ),
                   ),
                 ),
 
-                const SizedBox(height: 50),
+                const SizedBox(height: 30),
 
                 // 3. Full-Bleed Save The Date & Countdown (Spans 100% Screen Width)
                 Container(
@@ -384,29 +382,33 @@ class _InviteScreenState extends State<InviteScreen> {
           ),
         ),
         const SizedBox(height: 10),
-        RichText(
-  textAlign: TextAlign.center,
-  text: const TextSpan(
-    style: TextStyle(
-      color: Colors.black87,
-      fontSize: 15,
-      height: 1.5,
-    ),
-    children: [
-      TextSpan(
-        text: "Inviting you\nto witness the sacred union\n"
-            "solemnized by\n\n"
-            "Very Rev. Msgr. Mathew Kallingal\n\n",
+        Padding(
+  padding: const EdgeInsets.symmetric(horizontal: 10),
+  child: Text.rich(
+    TextSpan(
+      style: const TextStyle(
+        color: Colors.black87,
+        fontSize: 15,
+        height: 1.6,
       ),
-      TextSpan(
-        text: "11:00 AM\n"
-            "Mount Carmel Church\n"
-            "Chathiath",
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
+      children: [
+        const TextSpan(
+          text: "Inviting you\n"
+              "to witness the sacred union\n"
+              "solemnized by\n\n"
+              "Very Rev. Msgr. Mathew Kallingal\n\n",
         ),
-      ),
-    ],
+        const TextSpan(
+          text: "11:00 AM\n"
+              "Mount Carmel Church\n"
+              "Chathiath",
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ],
+    ),
+    textAlign: TextAlign.center,
   ),
 ),
         const SizedBox(height: 20),
@@ -439,24 +441,27 @@ class _InviteScreenState extends State<InviteScreen> {
           ),
         ),
         const SizedBox(height: 10),
-        RichText(
-  textAlign: TextAlign.center,
-  text: const TextSpan(
-    style: TextStyle(
-      color: Colors.black87,
-      fontSize: 15,
-      height: 1.5,
-    ),
-    children: [
-      TextSpan(
-        text: "12:30 PM\n"
-            "Carmel Hall\n"
-            "Cemetery Junction, Kochi",
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-        ),
+        Padding(
+  padding: const EdgeInsets.symmetric(horizontal: 10),
+  child: Text.rich(
+    TextSpan(
+      style: const TextStyle(
+        color: Colors.black87,
+        fontSize: 15,
+        height: 1.6,
       ),
-    ],
+      children: [
+        const TextSpan(
+          text: "12:30 PM\n"
+              "Carmel Hall\n"
+              "Cemetery Junction, Kochi",
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ],
+    ),
+    textAlign: TextAlign.center,
   ),
 ),
         const SizedBox(height: 20),
